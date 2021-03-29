@@ -16,14 +16,14 @@ Aplikacja ma posiadać następujące widoki:
 Aplikacja powinna zawierać routing i być responsywna.
 
 Zalecany stack technologiczny:
-[+] ES6+,
-[+] Node.js,
-[+] React.js,
-[] React Router,
-[] Webpack,
-[] Babel,
-[+] Styled Components lub Sass,
-[] inne wybrane przez developera.
+- ES6+,
+- Node.js,
+- React.js,
+- React Router,
+- Webpack,
+- Babel,
+- Styled Components lub Sass,
+- inne wybrane przez developera.
 
 
 
