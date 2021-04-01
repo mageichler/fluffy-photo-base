@@ -3,7 +3,9 @@ import SectionTitle from '../SectionTitle'
 
 const StyledSection = styled.section`
     background-color: var(--color-light-grey);
-    padding: 
+    width: 100%;
+    padding: 4rem 0;
+    text-align: center;
 `
 
 function SearchSection() {

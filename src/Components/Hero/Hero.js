@@ -18,7 +18,7 @@ const GradientBox = styled.div`
 
 const StyledPageTitle = styled.h1`
     color: var(--color-white);
-    font-size: 4.5em;
+    font-size: 5rem;
     align-self: flex-end;
     font-weight: 700;
     margin-bottom: 3.5rem;
