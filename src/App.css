@@ -1,1 +1,36 @@
-.App {
+*:root {
+    --color-black: #181F23;
+    --color-white: #FAFBFC;
+    --color-primary: #2285cc;
+    --color-light-grey: #EEF2F4;
+    --color-medium-grey: #DDE1E3;
+}
+
+html, body {
+    font-size: 16px;
+    line-height: 1.5rem;
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-white);
+    font-family: Poppins, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    font-weight: 300;
+}
+
+main {
+    margin-top: 4rem;
+    min-height: calc(100vh - 4rem - 6rem - 18px);
+}
+
+a {
+    color: var(--color-primary);
+    text-decoration: none;
+}
+
+a:hover,
+a:focus {
+    text-decoration: underline;
+}
