@@ -1,8 +1,9 @@
-import Card from '../Card/Card';
 import Container from '../Container';
 import Hero from '../Hero';
 import image from './erik-jan.jpg';
 import SearchSection from '../SearchSection';
+import SectionTitle from '../SectionTitle';
+import CardsList from '../CardsList/CardsList';
 
 function Main() {
 
@@ -10,7 +11,8 @@ function Main() {
         <Hero title="Only fluff photos." image={image} />
         <Container direction="column">
             <SearchSection />
-            <Card image={image}></Card>
+            <SectionTitle>Popular categories:</SectionTitle>
+            <CardsList />
             <div style={{ height: '50px' }}></div>
         </Container>
     </div>

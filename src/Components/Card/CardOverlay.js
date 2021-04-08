@@ -1,5 +1,5 @@
 import CardDetails from './CardDetails';
-import LoveButton from './LoveButton';
+import LoveButton from '../Button/LoveButton';
 import styled from 'styled-components';
 
 const Overlay = styled.div`

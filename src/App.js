@@ -6,6 +6,7 @@ import Footer from './Components/Footer';
 import Category from './Components/Category';
 import About from './Components/About';
 import Main from './Components/Main';
+import Photo from './Components/Photo';
 
 
 function App() {
@@ -22,6 +23,11 @@ function App() {
               </Route>
               <Route path="/about">
                 <About />
+              </Route>
+              <Route path="/endless-fluffiness">
+              </Route>
+            <Route path="/photo/:id">
+              <Photo />
               </Route>
               <Route path="/">
                 <Main />

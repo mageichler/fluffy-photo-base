@@ -21,7 +21,7 @@ const StyledPageTitle = styled.h1`
     font-size: 5rem;
     align-self: flex-end;
     font-weight: 700;
-    margin-bottom: 3.5rem;
+    margin-bottom: 4.5rem;
 `
 
 function Hero(props) {

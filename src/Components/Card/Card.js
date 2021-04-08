@@ -1,10 +1,11 @@
 import styled from 'styled-components';
 import { useState } from 'react';
 import CardOverlay from './CardOverlay';
+import { Link } from 'react-router-dom';
 
 const StyledCard = styled.article`
+    margin: 1rem;
     position: relative;
-    width: 350px;
     border-radius: var(--radius-medium);
     overflow: hidden;
     box-shadow: var(--shadow-small);
@@ -15,8 +16,6 @@ const StyledCard = styled.article`
     &:hover,
     &:focus {
         box-shadow: var(--shadow-medium);
-        margin-top: -0.5rem;
-        margin-bottom: 0.5rem;
     }
 
     & > div {
@@ -44,13 +43,16 @@ function Card(props) {
     const handleImageLoad = (e) => {
         const imageHeight = e.target.clientHeight;
         setCardHeight(imageHeight);
-        console.log(e.target, e.target.clientHeight, imageHeight);
     }
 
-    return <StyledCard style={{ height: cardHeight }}>
-        <Image src={props.image} alt="Sweet kitty" onLoad={handleImageLoad}/>
-        <CardOverlay author="Anton Lemsky" loves="23" downloads="11"/>
-    </StyledCard>
+    return (
+        <Link to={"/photo/" + props.id}>
+            <StyledCard style={{ height: cardHeight }} {...props}>
+                <Image src={props.image} alt={props.alt_text} onLoad={ handleImageLoad }/>
+                    <CardOverlay {...props} />
+            </StyledCard>
+        </Link>
+    )
 };
 
 export default Card;

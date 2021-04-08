@@ -9,6 +9,7 @@ const StyledNav = styled.nav`
     top: 0;
     width: 100%;
     padding: 1rem 0;
+    z-index: 99;
 `
 
 const StyledLogo = styled.div`
