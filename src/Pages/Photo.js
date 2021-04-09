@@ -1,12 +1,13 @@
-import { createApi } from 'unsplash-js';
-import nodeFetch from 'node-fetch';
+/* eslint-disable react-hooks/exhaustive-deps */
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import styled from 'styled-components';
-import Container from '../Container';
-import PhotoHeader from './PhotoHeader';
-import PhotoFooter from './PhotoFooter';
-import SectionTitle from '../SectionTitle';
+
+import Api from '../Api';
+import Container from '../Components/Container';
+import PhotoHeader from '../Components/Photo/PhotoHeader';
+import PhotoFooter from '../Components/Photo/PhotoFooter';
+import SectionTitle from '../Components/SectionTitle';
 
 const ImageWrap = styled.div`
     width: 100%;
@@ -22,24 +23,17 @@ const Image = styled.img`
     max-height: 80vh;
 `
 
+
 function Photo() {
     const { id } = useParams();
+    const query = "/photos/" + id;
 
     const [photo_data, set_photo_data] = useState();
 
     useEffect(() => {
-        const unsplash = createApi({
-            accessKey: '7AbJfZ0EILzxarytpKR1iSx-Yn2CLyJUK2Vqd1Cw_oQ',
-            fetch: nodeFetch,
-        });
-
-        unsplash.photos.get({ photoId: id })
-            .then(photo_data => {
-                set_photo_data(photo_data.response);
-            })
-            .catch(response => console.log("nope." + response))
+        Api(query, data => set_photo_data(data))
     }, [])
-
+    
     return (
         <Container direction="column">
             <div>Main fluff / Category: / Photo</div>

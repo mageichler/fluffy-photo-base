@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+import {categories} from './categories';
 
 const StyledCategoriesList = styled.ul`
     padding: 0;
@@ -9,7 +10,7 @@ const StyledCategoriesList = styled.ul`
         margin-bottom: 2rem;
         font-size: 1.5rem;
     }
-    
+
     & ul {
         padding: 0;
         margin-top: 1rem;
@@ -21,7 +22,7 @@ const StyledCategoriesList = styled.ul`
         font-size: 1rem;
         ${props => { return { ...props.listItemStyle } }}
     }
-    
+
     & a {
         display: block;
         color: var(--color-black);
@@ -32,40 +33,7 @@ const StyledCategoriesList = styled.ul`
     & a:focus {
         ${props => { return { ...props.linkHoverStyle } }}
     }
-
 `
-
-const categories = [
-    {
-        mainCategory: "Animals",
-        list:
-            [
-                "Cats",
-                "Kitties",
-                "Dogs",
-                "Puppies",
-                "Hamsters",
-                "Bunnies",
-                "Chicks",
-                "Tigers",
-                "Wolves",
-                "Cavias",
-                "Rats"
-            ]
-    },
-    {
-        mainCategory: "General",
-        list:
-            [
-                "Pets",
-                "Mamals",
-                "Wild animals",
-                "Fluffy babies",
-                "Rodents",
-                "Birds"
-            ]
-    }
-];
 
 const cats_elements = categories.map((item, index) => {
     return <li key={`main-` + index}>{item.mainCategory}

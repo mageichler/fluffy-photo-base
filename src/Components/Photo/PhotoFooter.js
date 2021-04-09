@@ -1,10 +1,11 @@
-import Author from './Author';
-import AuthorMoreInfo from './AuthorMoreInfo';
+import styled from 'styled-components';
+
+import Author from '../Author';
+import AuthorMoreInfo from '../Author/AuthorMoreInfo';
 import Statistics from '../Card/Statistics';
 import InfoButton from '../Button/InfoButton';
 import ShareButton from '../Button/ShareButton';
 import IconButtonsGroup from '../Button/IconButtonsGroup';
-import styled from 'styled-components';
 
 const FooterInfo = styled.div`
     display: flex;

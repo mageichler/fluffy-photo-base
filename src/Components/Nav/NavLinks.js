@@ -10,9 +10,9 @@ const StyledList = styled.ul`
 function NavLinks() {
 
     return <StyledList>
-        <NavLink target="" name="Home" />
-        <NavLink target="category" name="Categories of fluffiness"/>
-        <NavLink target="about" name="About this project"/>
+        <NavLink target="/" name="Home" />
+        <NavLink target="/category" name="Categories of fluffiness"/>
+        <NavLink target="/about" name="About this project"/>
     </StyledList>
 }
 

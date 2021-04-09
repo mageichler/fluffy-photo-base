@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const StyledButton = styled.button`
+const StyledButton = styled.a`
     display: flex;
     padding: 0;
     height: 2.5rem;
@@ -23,8 +23,7 @@ const StyledButton = styled.button`
 `
 
 function IconButton(props) {
-    
-    return <StyledButton {...props}>
+    return <StyledButton {...props} role="link" data-href={props.linkTarget} target="_blank">
         {props.children}
     </StyledButton>
 };

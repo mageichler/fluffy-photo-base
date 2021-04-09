@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import Published from './Published';
+import PublishedDate from '../PublishedDate';
 import LoveButton from '../Button/LoveButton';
 import DownloadButton from '../Button/DownloadButton';
 import IconButtonsGroup from '../Button/IconButtonsGroup';
@@ -14,7 +14,7 @@ const HeaderInfo = styled.div`
 function PhotoHeader(props) {
 
     return <HeaderInfo>
-        <Published date={props.date}/>
+        <PublishedDate date={props.date}/>
         <IconButtonsGroup>
             <LoveButton />
             <DownloadButton download={props.download}/>

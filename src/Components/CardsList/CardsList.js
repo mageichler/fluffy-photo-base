@@ -1,14 +1,15 @@
-import { createApi } from 'unsplash-js';
-import nodeFetch from 'node-fetch';
-import Card from '../Card/Card';
 import { useState, useEffect } from 'react';
 import styled from 'styled-components';
+
+import Api from '../../Api';
+import Card from '../Card/Card';
 
 const Collection = styled.div`
     display: flex;
     flex-wrap: wrap;
 
 `
+const query = '/search/photos?query=cat';
 
 function createCardsList(data) {
     return data.map(item => <Card
@@ -22,23 +23,15 @@ function createCardsList(data) {
     />)
 }
 
-function CardsList(props) {
+function CardsList() {
     const [card_collection, set_card_collection] = useState();
-    
+
     useEffect(() => {
-        const unsplash = createApi({
-            accessKey: '7AbJfZ0EILzxarytpKR1iSx-Yn2CLyJUK2Vqd1Cw_oQ',
-            fetch: nodeFetch,
-        });
-        
-        unsplash.search.getPhotos({
-            query: 'cat',
-            orderBy: "relevant"
-        })
-            .then(search_results => set_card_collection(createCardsList(search_results?.response?.results)))
-            
+        Api(query, data => set_card_collection(createCardsList(data.results)))
     }, []);
-    
+
+    console.log(card_collection);
+
     return <Collection>{card_collection}</Collection>
 };
 

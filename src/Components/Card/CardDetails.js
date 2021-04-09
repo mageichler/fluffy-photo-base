@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import Author from '../Photo/Author';
+import Author from '../Author/Author';
 
 const StyledCardDetails = styled.div`
     color: var(--color-white);
