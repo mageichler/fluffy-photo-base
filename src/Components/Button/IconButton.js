@@ -23,7 +23,7 @@ const StyledButton = styled.a`
 `
 
 function IconButton(props) {
-    return <StyledButton {...props} data-href={props.linkTarget} target="_blank">
+    return <StyledButton {...props} href={props.linkTarget} target="_blank">
         {props.children}
     </StyledButton>
 };

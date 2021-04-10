@@ -17,33 +17,15 @@ const StyledFontAwesomeIcon = styled(FontAwesomeIcon)`
     font-size: 1.2rem;
 `
 
-function portfolio(data) {
-    if (data !== null) {
-        return <IconButton linkTarget={data}><Globe /></IconButton>
-    }
-}
-
-function instagram(data) {
-    if (data !== null) {
-        return <IconButton linkTarget={"https://www.instagram.com/" + data}><Instagram /></IconButton>
-    }
-}
-
-function twitter(data) {
-    if (data !== null) {
-        return <IconButton linkTarget={"https://twitter.com/" + data}><Twitter /></IconButton>
-    }
-}
-
 function AuthorMoreInfo(props) {
     return (
         <Wrapper {...props}>
             <Bio>{props.author?.bio !== null ? props.author?.bio : ""}</Bio>
             <IconButtonsGroup justifyContent="flex-start">
                 <IconButton linkTarget={props.author?.links.self}><StyledFontAwesomeIcon icon={faUnsplash} /></IconButton>
-                {portfolio(props.author?.portfolio_url)}
-                {instagram(props.author?.instagram_username)}
-                {twitter(props.author?.twitter_username)}
+                {props.author?.portfolio_url && <IconButton linkTarget={props.author?.portfolio_url}><Globe /></IconButton>}
+                {props.author?.instagram_username && <IconButton linkTarget={"https://www.instagram.com/" + props.author?.instagram_username}><Instagram /></IconButton>}
+                {props.author?.twitter_username && <IconButton linkTarget={"https://twitter.com/" + props.author?.twitter_username}><Twitter /></IconButton>}
             </IconButtonsGroup>
         </Wrapper>
     );
