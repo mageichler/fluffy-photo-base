@@ -3,29 +3,28 @@ const list = [
         mainCategory: "Animals",
         list:
             [
-                "Cats",
-                "Kitties",
-                "Dogs",
-                "Puppies",
-                "Hamsters",
-                "Bunnies",
-                "Chicks",
-                "Tigers",
-                "Wolves",
-                "Cavias",
-                "Rats"
+                ["Cats", "cat"],
+                ["Kitties", "kitty"],
+                ["Dogs", "dog"],
+                ["Puppies", "puppy"],
+                ["Hamsters", "hamster"],
+                ["Bunnies", "bunny"],
+                ["Chicks", "chick"],
+                ["Tigers", "tiger"],
+                ["Wolves", "wolf"],
+                ["Rats", "rat"]
             ]
     },
     {
         mainCategory: "General",
         list:
             [
-                "Pets",
-                "Mamals",
-                "Wild animals",
-                "Fluffy babies",
-                "Rodents",
-                "Birds"
+                ["Pets", "pet"],
+                ["Mammals", "mammal"],
+                ["Wild animals", "wild"],
+                ["Fluffy babies", "fluffy%20baby"],
+                ["Rodents", "rodent"],
+                ["Birds", "bird"]
             ]
     }
 ];

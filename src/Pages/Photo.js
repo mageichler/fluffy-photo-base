@@ -34,10 +34,12 @@ function Photo() {
         Api(query, data => set_photo_data(data))
     }, [])
     
+    console.log(photo_data)
+
     return (
         <Container direction="column">
             <div>Main fluff / Category: / Photo</div>
-            <PhotoHeader date={photo_data?.updated_at} download={photo_data?.links?.self} />
+            <PhotoHeader date={photo_data?.updated_at} photoID={id}/>
             <ImageWrap>
                 <Image
                     src={photo_data?.urls?.regular}

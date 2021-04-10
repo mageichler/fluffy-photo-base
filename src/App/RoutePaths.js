@@ -5,6 +5,7 @@ import Category from '../Pages/Category';
 import About from '../Pages/About';
 import Main from '../Pages/Main';
 import Photo from '../Pages/Photo';
+import Endless from '../Pages/Endless';
 
 function RoutePaths() {
     return (
@@ -12,8 +13,11 @@ function RoutePaths() {
             <Nav />
             <main>
                 <Switch>
-                    <Route exact path="/" component={ Main }/>
-                    <Route path="/category" exact component={ Category }>
+                    <Route exact path="/">
+                        <Main />
+                    </Route>
+                    <Route path="/category/:name&:query">
+                        <Category />
                     </Route>
                     <Route path="/random">
                     </Route>
@@ -21,6 +25,7 @@ function RoutePaths() {
                         <About />
                     </Route>
                     <Route path="/endless-fluffiness">
+                        <Endless />
                     </Route>
                     <Route path="/photo/:id">
                         <Photo />

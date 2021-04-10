@@ -16,8 +16,8 @@ function PhotoHeader(props) {
     return <HeaderInfo>
         <PublishedDate date={props.date}/>
         <IconButtonsGroup>
-            <LoveButton />
-            <DownloadButton download={props.download}/>
+            <LoveButton photoID={props.photoID}/>
+            <DownloadButton photoID={props.photoID}/>
         </IconButtonsGroup>
     </HeaderInfo>
 }

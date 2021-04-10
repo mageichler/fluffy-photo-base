@@ -37,14 +37,17 @@ const StyledCategoriesList = styled.ul`
 
 const cats_elements = categories.map((item, index) => {
     return <li key={`main-` + index}>{item.mainCategory}
-        <ul>{item.list.map((element, index) => <li key={`sub-` + index}><Link>{element}</Link></li>)}
+        <ul>{item.list.map((element, index) =>
+            <li key={`sub-` + index}>
+                <Link to={`/category/` + element[0] + `&` + element[1]} thing={element[1]}>{
+                    element[0]}
+                </Link>
+            </li>)}
         </ul>
     </li>
 })
 
 function CategoriesList(props) {
-    console.log(props)
-
     return <StyledCategoriesList {...props}>{cats_elements}</StyledCategoriesList>;
 };
 
