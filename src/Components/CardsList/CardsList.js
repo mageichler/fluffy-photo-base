@@ -19,21 +19,26 @@ function createCardsList(data) {
         loves={item?.likes}
         downloads={item?.downloads}
         author={item?.user}
-    />)
+    />
+    )
 }
 
 function CardsList(props) {
     const [card_collection, set_card_collection] = useState();
-    const query = '/search/photos?collections=animals&query=' + props.query;
+    const query = '/search/photos?collections=animals&query=' + props.query + "&per_page=20";
 
+    
     useEffect(() => {
-        Api(query, data => set_card_collection(createCardsList(data.results)));
+        Api(query, data => set_card_collection(createCardsList(data?.results)))
     }, [props.query]);
     
+
+    console.log(card_collection)
+
     return (
         <Collection>
-            {card_collection}
-            {props.children}
+                {card_collection}
+                {props.children}
         </Collection>
     )
 };

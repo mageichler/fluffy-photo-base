@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-
 import Api from '../Api';
 import CardsList from '../Components/CardsList';
 import Container from '../Components/Container';
@@ -7,6 +6,7 @@ import Hero from '../Components/Hero';
 import Sort from "../Components/Sort/Sort";
 
 function Endless() {
+
     const [cover_photo, set_cover_photo] = useState();
     const [order_by, set_order_by] = useState();
     const query = '/topics/animals&content_filter=high';

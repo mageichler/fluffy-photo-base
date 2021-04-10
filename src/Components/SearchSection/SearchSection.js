@@ -2,6 +2,7 @@ import CategoriesList from '../CategoriesList';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import SectionTitle from '../SectionTitle'
+import SearchBar from '../SeachBar/SearchBar';
 
 const StyledSection = styled.section`
     background-color: var(--color-light-grey);
@@ -13,7 +14,8 @@ const StyledSection = styled.section`
 
 function SearchSection() {
     return <StyledSection>
-        <SectionTitle>Browse the fluffiness</SectionTitle>
+        <SectionTitle>Search for fluffiness</SectionTitle>
+        <SearchBar />
         <CategoriesList
             listItemStyle={{
                 margin: "0.5rem"

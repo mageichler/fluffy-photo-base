@@ -6,6 +6,7 @@ import About from '../Pages/About';
 import Main from '../Pages/Main';
 import Photo from '../Pages/Photo';
 import Endless from '../Pages/Endless';
+import Results from '../Pages/Results';
 
 function RoutePaths() {
     return (
@@ -19,7 +20,8 @@ function RoutePaths() {
                     <Route path="/category/:name&:query">
                         <Category />
                     </Route>
-                    <Route path="/random">
+                    <Route path="/results/:userQuery">
+                        <Results />
                     </Route>
                     <Route path="/about">
                         <About />
