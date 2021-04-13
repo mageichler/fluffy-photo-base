@@ -26,18 +26,23 @@ const StyledNavList = styled.div`
     }
 `
 
-function Nav() {
 
-    return <StyledNav>
-        <Container>
-            <StyledLogo>
-                <Logo />
-            </StyledLogo>
-            <StyledNavList>
-                <NavLinks />
-            </StyledNavList>
-        </Container>
-    </StyledNav>
+function Nav() {
+    
+    return (
+        <>
+            <StyledNav>
+                <Container>
+                    <StyledLogo>
+                        <Logo />
+                    </StyledLogo>
+                    <StyledNavList>
+                        <NavLinks />
+                    </StyledNavList>
+                </Container>
+            </StyledNav>
+        </>
+    )
 };
 
 export default Nav;

@@ -52,7 +52,7 @@ function Card(props) {
     }
 
     return (
-        <StyledLink to={"/photo/" + props.id}>
+        <StyledLink to={"../photo/" + props.id}>
             <StyledCard style={{ height: cardHeight }} {...props}>
                 <Image src={props.image} alt={props.alt_text} onLoad={ handleImageLoad }/>
                     <CardOverlay {...props} />

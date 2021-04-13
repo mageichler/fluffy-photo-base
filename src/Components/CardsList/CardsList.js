@@ -5,9 +5,9 @@ import Api from '../../Api';
 import Card from '../Card/Card';
 
 const Collection = styled.div`
-  columns: 4 auto;
-  column-gap: 1rem;
-  padding-bottom: 4rem;
+    columns: 4 auto;
+    column-gap: 1rem;
+    padding-bottom: 4rem;
 `
 
 function createCardsList(data) {
@@ -25,21 +25,21 @@ function createCardsList(data) {
 
 function CardsList(props) {
     const [card_collection, set_card_collection] = useState();
+    const [page, set_page] = useState("1");
     const query = '/search/photos?collections=animals&query=' + props.query + "&per_page=20";
 
-    
-    useEffect(() => {
-        Api(query, data => set_card_collection(createCardsList(data?.results)))
-    }, [props.query]);
-    
+    const handleFetch = page => Api(query, data => {
+        return set_card_collection(createCardsList(data?.results))
+    });
 
-    console.log(card_collection)
+    useEffect(() => {
+        handleFetch(page);
+    }, [props.query]);
 
     return (
-        <Collection>
-                {card_collection}
-                {props.children}
-        </Collection>
+            <Collection>
+            {card_collection}
+            </Collection>
     )
 };
 

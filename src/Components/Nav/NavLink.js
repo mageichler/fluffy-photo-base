@@ -12,6 +12,9 @@ const StyledLink = styled(Link)`
     color: var(--color-white);
     font-weight: 500;
     line-height: 1rem;
+    display: inline-flex;
+    align-items: flex-end;
+    align-conent: flex-end;
 `
 
 function NavLink(props) {
@@ -19,6 +22,7 @@ function NavLink(props) {
     return <ListItem>
         <StyledLink to={props.target}>
             {props.name}
+            {props.children}
         </StyledLink>
     </ListItem>
 };

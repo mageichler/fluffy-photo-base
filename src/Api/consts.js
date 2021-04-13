@@ -1,5 +1,6 @@
 export const UNSPLASH_BASE_URL = "https://api.unsplash.com"
-const UNSPLASH_ACCESS_KEY = "7AbJfZ0EILzxarytpKR1iSx-Yn2CLyJUK2Vqd1Cw_oQ"
+const UNSPLASH_ACCESS_KEY = "1GPLMVlbunPJLkVL8CVMF24FBQmMQVA20rbJ4CuW5V4"
+// const UNSPLASH_ACCESS_KEY = "jEwEJZbeztRskvUnMfrUi22KExcR6M7mfnxOqubsYuM"
 
 const UNSPLASH_AUTHORIZATION = `Client-ID ${UNSPLASH_ACCESS_KEY}`
 
