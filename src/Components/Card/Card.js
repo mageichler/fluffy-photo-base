@@ -4,9 +4,10 @@ import CardOverlay from './CardOverlay';
 import { Link } from 'react-router-dom';
 
 const StyledLink = styled(Link)`
-    margin: 0 1rem 1rem 0;
+    //margin: 0 1rem 1rem 0;
     display: inline-block;
-    width: 100%;
+    max-width: 100%;
+    //width: 25%;
 `
 
 const StyledCard = styled.article`

@@ -19,9 +19,9 @@ function NavLinks(props) {
     return (
         <StyledList>
             <NavLink target="/" name="Home" />
-            <NavLink target="/#" name="Categories">
+            {/* <NavLink target="/#" name="Categories">
                 <StyledChevronDown />
-            </NavLink>
+            </NavLink> */}
             <NavLink target="/about" name="About this project"/>
         </StyledList>
     )

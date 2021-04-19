@@ -1,10 +1,10 @@
 import Footer from '../Components/Footer';
-import RoutePaths from './RoutePaths';
+import RouteElements from './RouteElements';
 
 function App() {
   return (
     <div id="app">
-      <RoutePaths />
+      <RouteElements />
       <Footer />
     </div>
   );

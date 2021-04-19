@@ -8,7 +8,7 @@ import Photo from '../Pages/Photo';
 import Endless from '../Pages/Endless';
 import Results from '../Pages/Results';
 
-function RoutePaths() {
+function RouteElements() {
     return (
         <Router>
             <Nav />
@@ -35,8 +35,7 @@ function RoutePaths() {
                 </Switch>
                 </main>
       </Router>
-      
     );
 }
 
-export default RoutePaths;
+export default RouteElements;
