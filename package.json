@@ -23,7 +23,8 @@
     "unsplash-js": "^7.0.10",
     "web-vitals": "^1.1.1",
     "redux": "4.0.5",
-    "react-redux": "7.2.3"
+    "react-redux": "7.2.3",
+    "react-masonry-css": "1.0.16"
   },
   "scripts": {
     "start": "react-scripts start",

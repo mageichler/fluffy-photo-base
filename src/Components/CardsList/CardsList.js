@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import styled from 'styled-components';
+import Masonry from 'react-masonry-css';
 
 import Api from '../../Api';
 import Card from '../Card/Card';
@@ -8,15 +9,24 @@ const ScrollMe = styled.div`
     height: 700px;
     padding-bottom: 8rem;
     overflow: auto;
-    margin-right: -1rem;
 `
 
-const Collection = styled.div`
-    display: grid;
-    gap: 1rem;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    grid-auto-rows: minmax(180px, auto);
-    grid-auto-flow: dense;
+const Collection = styled(Masonry)`
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-left: -1rem;
+    width: auto;
+
+    & > .my-masonry-grid_column {
+    padding-left: 1rem;
+    background-clip: padding-box;
+    }
+
+    /* Style your items */
+    & > .my-masonry-grid_column > a {
+    margin-bottom: 1rem;
+    }
 `
 
 const createCardsList = data => {
@@ -55,7 +65,11 @@ function CardsList(props) {
     
     return (
         <ScrollMe onScroll={infinite_scroll}>
-            <Collection>
+            <Collection
+                breakpointCols={3}
+                className="my-masonry-grid"
+                columnClassName="my-masonry-grid_column"
+            >
                 {card_collection}
             </Collection>
         </ScrollMe>

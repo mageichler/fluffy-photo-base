@@ -1,16 +1,14 @@
 import styled from 'styled-components';
-import { useState } from 'react';
 import CardOverlay from './CardOverlay';
 import { Link } from 'react-router-dom';
 
 const StyledLink = styled(Link)`
-    //margin: 0 1rem 1rem 0;
-    display: inline-block;
+    display: block;
     max-width: 100%;
-    //width: 25%;
 `
 
 const StyledCard = styled.article`
+    line-height: 1rem;
     position: relative;
     border-radius: var(--radius-medium);
     overflow: hidden;
@@ -42,20 +40,23 @@ const StyledCard = styled.article`
 
 const Image = styled.img`
     width: 100%;
+    margin-bottom: -3px;
 `
 
 function Card(props) {
-    const [cardHeight, setCardHeight] = useState();
+    /* const [card_height, set_card_height] = useState();
+    const [image_height, set_image_height] = useState();
 
-    const handleImageLoad = (e) => {
-        const imageHeight = e.target.clientHeight;
-        setCardHeight(imageHeight);
-    }
-
+    const handle_image_load = e => {
+        set_image_height(e?.target?.clientHeight);
+        set_card_height(image_height);
+    };
+    
+     */
     return (
-        <StyledLink to={"../photo/" + props.id}>
-            <StyledCard style={{ height: cardHeight }} {...props}>
-                <Image src={props.image} alt={props.alt_text} onLoad={ handleImageLoad }/>
+        <StyledLink to={"../photo/" + props.id} className="card">
+            <StyledCard  {...props}>
+                <Image src={props.image} alt={props.alt_text} />
                     <CardOverlay {...props} />
             </StyledCard>
         </StyledLink>

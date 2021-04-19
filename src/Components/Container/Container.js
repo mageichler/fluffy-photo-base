@@ -6,6 +6,12 @@ const StyledContainer = styled.div`
     margin: 0 auto;
     display: flex;
     flex-direction: ${props => props.direction || `row`};
+
+    @media(max-width: 1264px) {
+        width: calc(100% - 4rem);
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
 `
 
 function Container(props) {

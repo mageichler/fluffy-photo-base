@@ -1,5 +1,5 @@
-import { ChevronDown } from 'react-feather';
-import styled from 'styled-components';
+/* import { ChevronDown } from 'react-feather';
+ */import styled from 'styled-components';
 
 import NavLink from './NavLink';
 
@@ -9,10 +9,10 @@ const StyledList = styled.ul`
     color: var(--color-white);
 `
 
-const StyledChevronDown = styled(ChevronDown)`
+/* const StyledChevronDown = styled(ChevronDown)`
     margin-bottom: -0.25rem;
     margin-left: 0.5rem;
-`
+` */
 
 function NavLinks(props) {
 
