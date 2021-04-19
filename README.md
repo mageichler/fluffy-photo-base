@@ -26,7 +26,7 @@ Also, as our mentor recommended, I've used the Styled Components library to put 
 
 **This is the current stage of the project. There are few things it has to be done and I'm still working on them.**
 
-Also, I want to show this app to the world, so I have a 'create Github page' on my checklist.
+I want to show this app to the world, so I have a 'create Github page' on my checklist.
 
 ### Adding more fluffy photos
 
