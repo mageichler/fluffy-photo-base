@@ -1,25 +1,28 @@
 {
   "files": {
     "main.css": "/fluffy-photo-base/static/css/main.5adbbbb2.chunk.css",
-    "main.js": "/fluffy-photo-base/static/js/main.7c74d743.chunk.js",
-    "main.js.map": "/fluffy-photo-base/static/js/main.7c74d743.chunk.js.map",
+    "main.js": "/fluffy-photo-base/static/js/main.2cc8cacc.chunk.js",
+    "main.js.map": "/fluffy-photo-base/static/js/main.2cc8cacc.chunk.js.map",
     "runtime-main.js": "/fluffy-photo-base/static/js/runtime-main.012e2fc9.js",
     "runtime-main.js.map": "/fluffy-photo-base/static/js/runtime-main.012e2fc9.js.map",
-    "static/js/2.5a396472.chunk.js": "/fluffy-photo-base/static/js/2.5a396472.chunk.js",
-    "static/js/2.5a396472.chunk.js.map": "/fluffy-photo-base/static/js/2.5a396472.chunk.js.map",
+    "static/js/2.69cfed13.chunk.js": "/fluffy-photo-base/static/js/2.69cfed13.chunk.js",
+    "static/js/2.69cfed13.chunk.js.map": "/fluffy-photo-base/static/js/2.69cfed13.chunk.js.map",
     "static/js/3.33a0c36c.chunk.js": "/fluffy-photo-base/static/js/3.33a0c36c.chunk.js",
     "static/js/3.33a0c36c.chunk.js.map": "/fluffy-photo-base/static/js/3.33a0c36c.chunk.js.map",
     "index.html": "/fluffy-photo-base/index.html",
     "static/css/main.5adbbbb2.chunk.css.map": "/fluffy-photo-base/static/css/main.5adbbbb2.chunk.css.map",
-    "static/js/2.5a396472.chunk.js.LICENSE.txt": "/fluffy-photo-base/static/js/2.5a396472.chunk.js.LICENSE.txt",
-    "static/media/chinchilla.92041990.jpg": "/fluffy-photo-base/static/media/chinchilla.92041990.jpg",
+    "static/js/2.69cfed13.chunk.js.LICENSE.txt": "/fluffy-photo-base/static/js/2.69cfed13.chunk.js.LICENSE.txt",
     "static/media/erik-jan.989f2b74.jpg": "/fluffy-photo-base/static/media/erik-jan.989f2b74.jpg",
-    "static/media/logo.2e42f7ab.svg": "/fluffy-photo-base/static/media/logo.2e42f7ab.svg"
+    "static/media/henry.9d2465e8.png": "/fluffy-photo-base/static/media/henry.9d2465e8.png",
+    "static/media/kazik.f7c5d5cf.png": "/fluffy-photo-base/static/media/kazik.f7c5d5cf.png",
+    "static/media/logo.2e42f7ab.svg": "/fluffy-photo-base/static/media/logo.2e42f7ab.svg",
+    "static/media/patrik-inzinger-zTmTp1Z-WAI-unsplash.d431adcf.jpg": "/fluffy-photo-base/static/media/patrik-inzinger-zTmTp1Z-WAI-unsplash.d431adcf.jpg",
+    "static/media/rysiu.2fcd6344.png": "/fluffy-photo-base/static/media/rysiu.2fcd6344.png"
   },
   "entrypoints": [
     "static/js/runtime-main.012e2fc9.js",
-    "static/js/2.5a396472.chunk.js",
+    "static/js/2.69cfed13.chunk.js",
     "static/css/main.5adbbbb2.chunk.css",
-    "static/js/main.7c74d743.chunk.js"
+    "static/js/main.2cc8cacc.chunk.js"
   ]
 }
