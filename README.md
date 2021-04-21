@@ -24,12 +24,12 @@ Through the programming course, I've learnt a lot and put (almost) everything in
 
 Also, as our mentor recommended, I've used the Styled Components library to put CSS directly into .js files.
 
-**This is the current stage of the project. There are few things it has to be done and I'm still working on them.**
-
 I want to show this app to the world, so I have a 'create Github page' on my checklist.
 
 ### Adding more fluffy photos
 
 As a huge fan of fluffy photo browsers, I've decided to add more photo bases to my app. Like Pexels. But this is the song of the future now.
 
+## Current app state
 
+At this moment, I can say that basic functions are working, I've also made it a little bit rsponsive (not much, there is a possibility that not everything is perfect on smaller screens). I still have some things on my checklist but it is a moment when I want to show it on Github Pages.
