@@ -2,7 +2,7 @@
 
 Published here: (https://mageichler.github.io/fluffy-photo-base/)
 
-Welcome to my very first React.js app! This is also my final project from programming classes. I still working on improving some features so at this moment I kindly ask you to be patient and forgiving if something doesn't work perfectly.
+Welcome to my very first React.js app! This is also my final project from programming classes. I'm still working on improving some features so at this moment I kindly ask you to be patient and forgiving if something doesn't work perfectly.
 
 ## Project stages & used tools
 
@@ -26,7 +26,7 @@ Through the programming course, I've learnt a lot and put (almost) everything in
 
 Also, as our mentor recommended, I've used the Styled Components library to put CSS directly into .js files.
 
-I want to show this app to the world, so I have a 'create Github page' on my checklist.
+~~I want to show this app to the world, so I have a 'create Github page' on my checklist.~~ DONE
 
 ### Adding more fluffy photos
 
