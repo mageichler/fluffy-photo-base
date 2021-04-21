@@ -6,9 +6,7 @@ import Api from '../../Api';
 import Card from '../Card/Card';
 
 const ScrollMe = styled.div`
-    height: 700px;
     padding-bottom: 8rem;
-    overflow: auto;
 `
 
 const Collection = styled(Masonry)`
@@ -46,27 +44,35 @@ function CardsList(props) {
     const [card_collection, set_card_collection] = useState();
     const [page, set_page] = useState(1);
     const query = '/search/photos?collections=animals&query=' + props.query + "&per_page=10&page=" + page;
-    console.log(page, query);
-    
-    const handleFetch = () => Api(query, data => set_card_collection([...card_collection || "", ...createCardsList(data?.results)]));
-    
+
+    const handleFetch = () => Api(query, data => {
+        set_card_collection([...card_collection || "", ...createCardsList(data?.results)]);
+        set_page(Number(page) + 1);
+        return card_collection;
+    });
+
     const infinite_scroll = e => {
-        if (e.target.scrollHeight - e.target.scrollTop === e.target.clientHeight) {
-            set_page(Number(page) + 1);
+        const target_element = e?.target?.scrollingElement;
+        const bottom_margin = 64;
+        if (target_element?.scrollHeight - target_element?.scrollTop === target_element?.clientHeight) {
             handleFetch();
         }
     }
-    
+
     useEffect(() => {
-        set_card_collection('')
-        handleFetch(page);
-        set_page(Number(page) + 1);
+        handleFetch();
     }, [props.query]);
-    
+
+    useEffect(() => {
+        window.addEventListener("scroll", infinite_scroll);
+        console.log(query)
+        return () => window.removeEventListener("scroll", infinite_scroll);
+    }, [query]);
+
     return (
-        <ScrollMe onScroll={infinite_scroll}>
+        <ScrollMe>
             <Collection
-                breakpointCols={3}
+                breakpointCols={4}
                 className="my-masonry-grid"
                 columnClassName="my-masonry-grid_column"
             >
