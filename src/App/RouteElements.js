@@ -14,9 +14,6 @@ function RouteElements() {
             <Nav />
             <main>
                 <Switch>
-                    <Route exact path="/">
-                        <Main />
-                    </Route>
                     <Route path="/category/:name&:query">
                         <Category />
                     </Route>
@@ -31,6 +28,9 @@ function RouteElements() {
                     </Route>
                     <Route path="/photo/:id">
                         <Photo />
+                    </Route>
+                    <Route path="/">
+                        <Main />
                     </Route>
                 </Switch>
                 </main>
