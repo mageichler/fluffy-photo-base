@@ -14,22 +14,22 @@ function RouteElements() {
             <Nav />
             <main>
                 <Switch>
-                    <Route path="/fluffy-photo-base/category/:name&:query">
+                    <Route path="/category/:name&:query">
                         <Category />
                     </Route>
-                    <Route path="/fluffy-photo-base/results/:userQuery">
+                    <Route path="/results/:userQuery">
                         <Results />
                     </Route>
-                    <Route path="/fluffy-photo-base/about">
+                    <Route path="/about">
                         <About />
                     </Route>
-                    <Route path="/fluffy-photo-base/endless-fluffiness">
+                    <Route path="/endless-fluffiness">
                         <Endless />
                     </Route>
-                    <Route path="/fluffy-photo-base/photo/:id">
+                    <Route path="/photo/:id">
                         <Photo />
                     </Route>
-                    <Route path="/fluffy-photo-base/">
+                    <Route path="/">
                         <Main />
                     </Route>
                 </Switch>
