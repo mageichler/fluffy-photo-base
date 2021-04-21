@@ -1,5 +1,7 @@
 # Fluffy photo base
 
+Published here: (https://mageichler.github.io/fluffy-photo-base/)
+
 Welcome to my very first React.js app! This is also my final project from programming classes. I still working on improving some features so at this moment I kindly ask you to be patient and forgiving if something doesn't work perfectly.
 
 ## Project stages & used tools
