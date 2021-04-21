@@ -29,8 +29,8 @@ function PhotoFooter(props) {
                 downloads={props.downloads}
             />
             <IconButtonsGroup>
-                <InfoButton />
-                <ShareButton />
+{/*                 <InfoButton />
+                <ShareButton /> */}
             </IconButtonsGroup>
         </RightColumn>
     </FooterInfo>

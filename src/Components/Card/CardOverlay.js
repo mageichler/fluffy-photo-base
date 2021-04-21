@@ -1,5 +1,4 @@
 import CardDetails from './CardDetails';
-import LoveButton from '../Button/LoveButton';
 import styled from 'styled-components';
 
 const Overlay = styled.div`
@@ -21,7 +20,7 @@ const Buttons = styled.div`
 function CardOverlay(props) {
     return <Overlay {...props}>
             <Buttons>
-                <LoveButton />
+                
             </Buttons>
             <CardDetails {...props}/>
         </Overlay>

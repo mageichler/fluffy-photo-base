@@ -53,7 +53,6 @@ function CardsList(props) {
 
     const infinite_scroll = e => {
         const target_element = e?.target?.scrollingElement;
-        const bottom_margin = 64;
         if (target_element?.scrollHeight - target_element?.scrollTop === target_element?.clientHeight) {
             handleFetch();
         }
@@ -61,6 +60,7 @@ function CardsList(props) {
 
     useEffect(() => {
         handleFetch();
+        set_page(Number(page) + 1);
     }, [props.query]);
 
     useEffect(() => {
