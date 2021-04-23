@@ -26,6 +26,15 @@ Through the programming course, I've learnt a lot and put (almost) everything in
 
 Also, as our mentor recommended, I've used the Styled Components library to put CSS directly into .js files.
 
+So, I used:
+1. React Router
+2. Styled Components
+3. React Masonry CSS
+4. GH Pages
+5. Unsplash API
+6. Feather Icons & Fontawesome Brand Icons
+7. Tones of infinite scroll libraries but eventually I've done this by myself 
+
 ~~I want to show this app to the world, so I have a 'create Github page' on my checklist.~~ DONE
 
 ### Adding more fluffy photos
