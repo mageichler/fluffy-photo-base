@@ -18,6 +18,7 @@ const StyledDropdown = styled.select`
     width: 25%;
     font-size: 1rem;
     font-family: inherit;
+    outline: 0;
 `
 function Sort(props) {
 

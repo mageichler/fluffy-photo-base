@@ -11,8 +11,8 @@ import Sort from "../Components/Sort/Sort";
 function Endless() {
 
     const [cover_photo, set_cover_photo] = useState();
-    const [order_by, set_order_by] = useState();
-    const query = '/topics/animals&content_filter=high';
+    const [order_by, set_order_by] = useState("relevant");
+    const query = '/topics/animals/photos';
     const query_cp = '/photos/random?query=fluffy&orientation=landscape&content_filter=high';
 
     useEffect(() => {
@@ -23,8 +23,7 @@ function Endless() {
         <>
             <Hero title="Endless flufiness" image={cover_photo} />
             <Container direction="column">
-                <Sort order={set_order_by} />
-                <CardsList query={query + "&order_by=" + order_by} />
+                <CardsList query={query + "?"} />
             </Container>
 
         </>

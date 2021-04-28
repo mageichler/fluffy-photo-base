@@ -21,14 +21,13 @@ const Collection = styled(Masonry)`
     background-clip: padding-box;
     }
 
-    /* Style your items */
     & > .my-masonry-grid_column > a {
     margin-bottom: 1rem;
     }
 `
 
-const createCardsList = data => {
-    return data.map(item => <Card
+const create_cards_list = data => {
+    return data?.map(item => <Card
         id={item?.id}
         key={item?.id}
         image={item?.urls?.small}
@@ -41,33 +40,33 @@ const createCardsList = data => {
 }
 
 function CardsList(props) {
-    const [card_collection, set_card_collection] = useState();
+    const [card_collection, set_card_collection] = useState([]);
     const [page, set_page] = useState(1);
-    const query = '/search/photos?collections=animals&query=' + props.query + "&per_page=10&page=" + page;
-
-    const handleFetch = () => Api(query, data => {
-        set_card_collection([...card_collection || "", ...createCardsList(data?.results)]);
-        set_page(Number(page) + 1);
-        return card_collection;
-    });
-
+    const query = `/search/photos?collections=animals&query=${props.query}&per_page=10&page=${page}`;
+    
+    const handle_fetch = () => Api(query, data => set_card_collection([...create_cards_list(data?.results)]));
+    
     const infinite_scroll = e => {
         const target_element = e?.target?.scrollingElement;
         if (target_element?.scrollHeight - target_element?.scrollTop === target_element?.clientHeight) {
-            handleFetch();
+            console.log("page: ", page, Number(page))
+            set_page(Number(page) + 1);
+            Api(query, data => set_card_collection([...card_collection, ...create_cards_list(data?.results)]))
         }
     }
-
+    console.log("QUERY PROPS-1: ", query, card_collection)
     useEffect(() => {
-        handleFetch();
-        set_page(Number(page) + 1);
+        set_card_collection([]);
+        set_page(1)
+        console.log("QUERY PROPS: ", query, card_collection)
+        handle_fetch();
     }, [props.query]);
 
     useEffect(() => {
+        console.log("PAGE QUERY: ", query)
         window.addEventListener("scroll", infinite_scroll);
-        console.log(query)
         return () => window.removeEventListener("scroll", infinite_scroll);
-    }, [query]);
+    });
 
     return (
         <ScrollMe>
